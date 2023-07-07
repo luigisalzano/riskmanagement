@@ -9,9 +9,7 @@ annotate rm.Risks with {
     descr  @title : 'Description';
     miti   @title : 'Mitigation';
     impact @title : 'Impact';
-    //### BEGIN OF INSERT
     bp     @title : 'Business Partner';
-//### END OF INSERT
 }
 
 // Annotate Miti elements
@@ -24,7 +22,6 @@ annotate rm.Mitigations with {
     descr @title : 'Description';
 }
 
-//### BEGIN OF INSERT
 annotate rm.BusinessPartners with {
     BusinessPartner @(
         UI.Hidden,
@@ -33,7 +30,6 @@ annotate rm.BusinessPartners with {
     LastName        @title : 'Last Name';
     FirstName       @title : 'First Name';
 }
-//### END OF INSERT
 
 annotate rm.Risks with {
     miti @(Common : {
@@ -57,7 +53,6 @@ annotate rm.Risks with {
         }
     });
 
-    //### BEGIN OF INSERT
     bp   @(Common : {
         Text            : bp.LastName,
         TextArrangement : #TextOnly,
@@ -81,5 +76,4 @@ annotate rm.Risks with {
             ]
         }
     })
-//### END OF INSERT
 }
